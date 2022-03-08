@@ -4,10 +4,10 @@ import './index.module.css';
 import App from './app';
 import AuthService from './service/auth_service';
 
-const authSercice = new AuthService();
+const authService = new AuthService();
 ReactDOM.render(
   <React.StrictMode>
-    <App authSercice={authSercice} />
+    <App authService={authService} />
   </React.StrictMode>,
   document.getElementById('root')
 );
