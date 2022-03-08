@@ -1,22 +1,12 @@
-import './app.css';
-import {BrowserRouter, Routes, Route, Link} from 'react-router-dom';
-import Home from './components/home';
-import Profile from './components/profile';
+import React from 'react';
+import styles from './app.module.css';
+import Login from './components/login/login';
 
-function App() {
+function App({ authService }) {
   return (
-    <BrowserRouter>
-    <nav>
-      <Link to='/'>Home</Link>
-      <Link to='/profile'>Profile</Link>
-    </nav>
-    <Routes>
-      <Route path="/" exact element={<Home />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/profile" element={<Profile />} />
-    </Routes>
-      <div>Template</div>
-    </BrowserRouter>
+    <div className={styles.app}>
+      <Login authService={authService} />
+    </div>
   );
 }
 
