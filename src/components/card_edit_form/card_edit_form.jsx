@@ -1,24 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styles from './card_edit_form.module.css';
 import Button from '../button/button';
 
 const CardEditForm = ({ FileInput, card, createOrUpdateCard, deleteCard }) => {
-  // const nameRef = useRef();
-  // const companyRef = useRef();
-  // const themeRef = useRef();
-  // const titleRef = useRef();
-  // const emailRef = useRef();
-  // const messageRef = useRef();
-  const {
-    name,
-    company,
-    title,
-    email,
-    message,
-    theme,
-    fileName,
-    fileURL,
-  } = card;
+  const { name, company, title, email, message, theme, fileName } = card;
 
   const onFileChange = file => {
     createOrUpdateCard({
